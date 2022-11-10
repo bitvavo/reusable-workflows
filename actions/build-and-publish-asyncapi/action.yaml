@@ -26,7 +26,7 @@ runs:
       uses: docker://asyncapi/github-action-for-generator:2.0.0
       with:
         template: '@asyncapi/html-template@0.9.0'
-        output: swagger-ui
+        output: ${{ inputs.target-directory }}
         filepath: ${{ inputs.file-path }}
 
     - name: Push to asyncapi-swagger
@@ -34,7 +34,7 @@ runs:
       env:
         SSH_DEPLOY_KEY: ${{ inputs.SSH_DEPLOY_KEY }}
       with:
-        source-directory: swagger-ui
+        source-directory: ${{ inputs.target-directory }}
         destination-github-username: bitvavo
         destination-repository-name: asyncapi-swagger
         target-branch: master
