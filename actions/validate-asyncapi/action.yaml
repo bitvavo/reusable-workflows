@@ -14,4 +14,4 @@ jobs:
     - name: Validating AsyncAPI document
       uses: WaleedAshraf/asyncapi-github-action@v0.0.8
       with:
-        filepath: ${{ inputs.file-path }}
+        filepath: ${{ github.event.inputs.file-path }}
