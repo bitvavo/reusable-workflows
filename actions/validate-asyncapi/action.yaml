@@ -1,13 +1,12 @@
 name: Validate AsyncAPI
 
-on:
-  workflow_call:
-    inputs:
-      file-path:
-        required: true
-        type: string
+inputs:
+  file-path:
+    required: true
+    type: string
 
 runs:
+  using: "composite"
   steps:
     - name: Validating AsyncAPI document
       uses: WaleedAshraf/asyncapi-github-action@v0.0.8
