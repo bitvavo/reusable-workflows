@@ -11,10 +11,7 @@ jobs:
   validate-asyncapi:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Validating AsyncAPI document
-        uses: WaleedAshraf/asyncapi-github-action@v0.0.8
-        with:
-          filepath: ${{ inputs.file-path }}
+    - name: Validating AsyncAPI document
+      uses: WaleedAshraf/asyncapi-github-action@v0.0.8
+      with:
+        filepath: ${{ inputs.file-path }}
