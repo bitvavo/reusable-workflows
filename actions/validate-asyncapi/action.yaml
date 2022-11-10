@@ -8,7 +8,6 @@ on:
         type: string
 
 runs:
-  runs-on: ubuntu-latest
   steps:
     - name: Validating AsyncAPI document
       uses: WaleedAshraf/asyncapi-github-action@v0.0.8
