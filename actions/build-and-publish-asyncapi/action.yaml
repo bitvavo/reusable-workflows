@@ -7,9 +7,9 @@ inputs:
   target-directory:
     required: true
     type: string
-secrets:
   SSH_DEPLOY_KEY:
     required: true
+    type: string
 
 runs:
   using: "composite"
