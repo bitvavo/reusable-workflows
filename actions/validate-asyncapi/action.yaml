@@ -7,11 +7,9 @@ on:
         required: true
         type: string
 
-jobs:
-  validate-asyncapi:
-    runs-on: ubuntu-latest
-    steps:
+runs:
+  steps:
     - name: Validating AsyncAPI document
       uses: WaleedAshraf/asyncapi-github-action@v0.0.8
       with:
-        filepath: ${{ github.event.inputs.file-path }}
+        filepath: ${{ inputs.file-path }}
