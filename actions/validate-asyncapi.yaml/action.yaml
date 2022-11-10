@@ -1,7 +1,7 @@
 name: Validate AsyncAPI
 
 on:
-  worklflow_call:
+  workflow_call:
     inputs:
       file-path:
         required: true
